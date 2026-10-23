@@ -1,0 +1,360 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#e52d4e">
+<meta name="description" content="Apple Kiss: a cute corner for music, fashion, gaming, beauty and everyday life.">
+<title>Apple Kiss | A Little Bit of Everything</title>
+
+<style>
+:root {
+  --red: #e52d4e;
+  --pink: #f3abc5;
+  --blush: #fff0f5;
+  --white: #ffffff;
+  --green: #9bc983;
+  --green-light: #eaf5e3;
+  --berry: #54283c;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  color: var(--berry);
+  font-family: Arial, sans-serif;
+  background-color: #fff3f7;
+  background-image:
+    linear-gradient(45deg, #f4c8d8 25%, transparent 25%,
+      transparent 75%, #f4c8d8 75%),
+    linear-gradient(45deg, #f4c8d8 25%, transparent 25%,
+      transparent 75%, #f4c8d8 75%);
+  background-size: 28px 28px;
+  background-position: 0 0, 14px 14px;
+}
+a { color: inherit; }
+header {
+  background: var(--white);
+  text-align: center;
+  padding: 24px 12px;
+  border-bottom: 4px solid var(--red);
+}
+.stickers { font-size: 23px; letter-spacing: 4px; }
+.logo {
+  font-family: Georgia, serif;
+  font-size: clamp(36px, 10vw, 62px);
+  color: var(--red);
+  margin: 10px 0;
+  letter-spacing: -2px;
+}
+header p { margin: 7px 0; }
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 7px;
+  padding: 12px 7px;
+  background: var(--red);
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 9px 11px;
+  border: 1px solid #ffffff80;
+  border-radius: 20px;
+}
+nav a:hover { background: var(--berry); }
+main {
+  width: min(94%, 960px);
+  margin: 24px auto;
+}
+.panel {
+  border: 2px solid var(--berry);
+  border-radius: 20px;
+  box-shadow: 4px 4px 0 var(--berry);
+}
+.hero {
+  background: var(--pink);
+  padding: 30px 18px;
+  text-align: center;
+}
+.big-apple { font-size: 42px; }
+.eyebrow {
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+.hero h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(30px, 7vw, 45px);
+  margin: 12px 0;
+  line-height: 1.15;
+}
+.hero p {
+  max-width: 540px;
+  margin: 12px auto 20px;
+  line-height: 1.8;
+}
+.button {
+  display: inline-block;
+  background: var(--red);
+  color: white;
+  padding: 12px 18px;
+  border: 2px solid var(--berry);
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 3px 3px 0 var(--berry);
+}
+.section-title {
+  font-family: Georgia, serif;
+  font-size: 26px;
+  margin: 32px 0 15px;
+}
+.categories {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit, minmax(110px, 1fr)
+  );
+  gap: 12px;
+}
+.category {
+  display: block;
+  background: white;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 15px 7px;
+  border: 2px solid var(--berry);
+  border-radius: 15px;
+  box-shadow: 3px 3px 0 var(--berry);
+}
+.category span {
+  display: block;
+  font-size: 27px;
+  margin-bottom: 7px;
+}
+.category:nth-child(3n) { background: var(--green-light); }
+.category:hover { background: var(--pink); }
+.posts {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit, minmax(min(100%, 225px), 1fr)
+  );
+  gap: 15px;
+}
+.post {
+  background: white;
+  border: 2px solid var(--berry);
+  border-radius: 17px;
+  overflow: hidden;
+  box-shadow: 4px 4px 0 var(--berry);
+}
+.post-cover {
+  padding: 18px;
+  font-size: 36px;
+  background: var(--pink);
+  border-bottom: 2px solid var(--berry);
+}
+.post:nth-child(even) .post-cover {
+  background: var(--green-light);
+}
+.post:nth-child(3n) .post-cover {
+  background: var(--red);
+  color: white;
+}
+.post-content { padding: 16px; }
+.label {
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #4e803d;
+}
+.post h3 {
+  margin: 9px 0;
+  color: var(--red);
+  font-size: 20px;
+}
+.post p {
+  font-size: 14px;
+  line-height: 1.7;
+}
+.read-more {
+  color: var(--red);
+  font-size: 13px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.about {
+  margin-top: 30px;
+  padding: 22px;
+  background: white;
+  border: 2px solid var(--berry);
+  border-left: 8px solid var(--green);
+  border-radius: 15px;
+  line-height: 1.8;
+}
+.about h2 {
+  color: var(--red);
+  font-family: Georgia, serif;
+}
+.note {
+  text-align: center;
+  font-size: 14px;
+  padding: 18px 0;
+}
+footer {
+  margin-top: 35px;
+  background: var(--berry);
+  color: white;
+  text-align: center;
+  padding: 26px 12px;
+}
+footer p { font-size: 12px; }
+@media (max-width: 400px) {
+  nav { gap: 5px; }
+  nav a { padding: 8px; font-size: 11px; }
+  .hero { padding: 24px 12px; }
+}
+</style>
+</head>
+
+<body>
+<header>
+  <div class="stickers">🍎 🍓 ⭐ 🍏 🎧</div>
+  <h1 class="logo">APPLE KISS</h1>
+  <p>Cute things. Real talk. All vibes. ♡</p>
+  <div class="stickers">♥ 🎀 ★ 🍒 ♥</div>
+</header>
+
+<nav>
+  <a href="#home">HOME</a>
+  <a href="#explore">EXPLORE</a>
+  <a href="#latest">LATEST</a>
+  <a href="#about">ABOUT</a>
+</nav>
+
+<main>
+<section class="hero panel" id="home">
+  <div class="big-apple">🍎 🎀 🍏</div>
+  <p class="eyebrow">WELCOME TO THE CLUB</p>
+  <h2>A little cute.<br>A little cool.</h2>
+  <p>
+    Your corner of the internet for music, fashion,
+    beauty, gaming, lifestyle, opinions, and
+    everything in between.
+  </p>
+  <a class="button" href="#explore">EXPLORE THE VIBE ↗</a>
+</section>
+
+<section id="explore">
+  <h2 class="section-title">Pick your vibe. 🍓</h2>
+  <div class="categories">
+    <a class="category" href="#beauty"><span>💄</span>Beauty</a>
+    <a class="category" href="#fashion"><span>👟</span>Fashion</a>
+    <a class="category" href="#music"><span>🎧</span>Music</a>
+    <a class="category" href="#gaming"><span>🎮</span>Gaming</a>
+    <a class="category" href="#lifestyle"><span>📸</span>Lifestyle</a>
+    <a class="category" href="#thoughts"><span>💭</span>Real Talk</a>
+  </div>
+</section>
+
+<section id="latest">
+  <h2 class="section-title">Fresh off the page. ★</h2>
+  <div class="posts">
+
+    <article class="post" id="beauty">
+      <div class="post-cover">🍓 ✨</div>
+      <div class="post-content">
+        <div class="label">Beauty and self-care</div>
+        <h3>Little Things, Big Vibes</h3>
+        <p>Discover routines, products, and ideas
+        that make everyday life feel special.</p>
+        <a class="read-more" href="#about">READ MORE ♡</a>
+      </div>
+    </article>
+
+    <article class="post" id="fashion">
+      <div class="post-cover">👟 ⭐</div>
+      <div class="post-content">
+        <div class="label">Fashion and style</div>
+        <h3>Wear Your Own Vibe</h3>
+        <p>Outfit inspiration, sneakers, accessories,
+        and styles for everybody.</p>
+        <a class="read-more" href="#about">READ MORE ♡</a>
+      </div>
+    </article>
+
+    <article class="post" id="music">
+      <div class="post-cover">🎧 ♥</div>
+      <div class="post-content">
+        <div class="label">Music and entertainment</div>
+        <h3>Currently on Repeat</h3>
+        <p>Favourite artists, new discoveries,
+        playlists, and music conversations.</p>
+        <a class="read-more" href="#about">READ MORE ♡</a>
+      </div>
+    </article>
+
+    <article class="post" id="gaming">
+      <div class="post-cover">🎮 🍏</div>
+      <div class="post-content">
+        <div class="label">Gaming and technology</div>
+        <h3>Game On!</h3>
+        <p>Games, apps, gadgets, and interesting
+        things from the digital world.</p>
+        <a class="read-more" href="#about">READ MORE ♡</a>
+      </div>
+    </article>
+
+    <article class="post" id="lifestyle">
+      <div class="post-cover">📸 🌿</div>
+      <div class="post-content">
+        <div class="label">Lifestyle</div>
+        <h3>Life Lately</h3>
+        <p>Everyday moments, hobbies, creativity,
+        and little adventures.</p>
+        <a class="read-more" href="#about">READ MORE ♡</a>
+      </div>
+    </article>
+
+    <article class="post" id="thoughts">
+      <div class="post-cover">💭 🍒</div>
+      <div class="post-content">
+        <div class="label">Opinions and thoughts</div>
+        <h3>Let's Talk About It</h3>
+        <p>Ideas, questions, opinions, and
+        conversations about anything.</p>
+        <a class="read-more" href="#about">READ MORE ♡</a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section class="about" id="about">
+  <h2>♡ A Little About Apple Kiss</h2>
+  <p>
+    Welcome to Apple Kiss, where cute meets cool!
+    This is a space for everybody to explore music,
+    fashion, games, beauty, creativity, and everyday
+    life. Come as you are and find your vibe. 🍎
+  </p>
+  <p>Different interests. One happy little corner. ★</p>
+</section>
+
+<p class="note">🍏 Stay curious. Be yourself. Spread good vibes. 🍓</p>
+</main>
+
+<footer>
+  <div class="stickers">🍎 ♥ 🍓 ★ 🍏</div>
+  <h3>APPLE KISS</h3>
+  <p>Made with love and a little apple magic.</p>
+  <p>© 2026 Apple Kiss</p>
+</footer>
+</body>
+</html>
